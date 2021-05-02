@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from "mobx-react";
-import YourStore from "./Store/YourStore";
+import YourStore from "./stores/YourStore";
 
 const yourstore = new YourStore();
 
