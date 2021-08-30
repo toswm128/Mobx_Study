@@ -1,0 +1,12 @@
+.card {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 0 auto;
+  justify-content: space-between;
+}
+
+.card-item {
+  width: 500px;
+  border: 1px solid black;
+}
