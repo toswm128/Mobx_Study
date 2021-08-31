@@ -25,17 +25,16 @@ function App() {
   const handleList = list => {
     setList(list);
   };
+
   return (
-    <Store>
-      <ListContext.Provider value={{ list: list, handleList }}>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Main} />
-            <Route path="/serve" component={Serve} />
-          </Switch>
-        </Router>
-      </ListContext.Provider>
-    </Store>
+    <ListContext.Provider value={{ list: list, handleList }}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/serve" component={Serve} />
+        </Switch>
+      </Router>
+    </ListContext.Provider>
   );
 }
 
