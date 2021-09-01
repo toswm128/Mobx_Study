@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { ListContext } from "../Store/Store";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
+import useStores from "../Hooks/useStore";
 
 const Serve = () => {
-  const { list } = useContext(ListContext);
+  const { store } = useStores();
+
+  const list = store.list;
 
   return (
     <div>

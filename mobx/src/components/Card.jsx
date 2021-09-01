@@ -2,7 +2,6 @@ import React from "react";
 import "./Card.css";
 
 const Card = ({ list }) => {
-  console.log(list);
   return (
     <div className="card">
       {list.map((current, key) => {
