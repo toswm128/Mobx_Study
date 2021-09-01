@@ -1,10 +1,15 @@
-import React, { useState, useContext, useMemo } from "react";
-import Card from "../components/Card";
-import { ListContext } from "../Store/Store";
+import React, { useState } from "react";
+// import Card from "../components/Card";
+// import { ListContext } from "../Store/Store";
 import { Link } from "react-router-dom";
+import { observer } from "mobx-react";
+import useStores from "../Hooks/useStore";
 
 const Main = () => {
-  const { list, handleList } = useContext(ListContext);
+  // const { list, handleList } = useContext(ListContext);
+  const store = useStores();
+  console.log(store);
+  // const List = observer({ store });
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -13,7 +18,7 @@ const Main = () => {
   return (
     <div>
       <div>Main</div>
-      <Card list={list} />
+      {/* <Card list={list} /> */}
 
       <input
         type="text"
@@ -30,14 +35,14 @@ const Main = () => {
         value={writer}
         onChange={e => setWriter(e.target.value)}
       />
-      <button
+      {/* <button
         onClick={() => {
           console.log(list);
           handleList([...list, { title, content, writer }]);
         }}
       >
         제출
-      </button>
+      </button> */}
       <Link to="/serve">하이</Link>
     </div>
   );

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Card from "../components/Card";
 
 const Serve = () => {
-  const { list, handleList } = useContext(ListContext);
+  const { list } = useContext(ListContext);
 
   return (
     <div>
