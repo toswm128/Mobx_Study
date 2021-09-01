@@ -1,9 +1,16 @@
-import { observable, action } from "mobx";
+import { observable, action, makeObservable, makeAutoObservable } from "mobx";
 
 class MOBX {
-  @observable list = [{ title: "a", content: "aa", writer: "aaa" }];
+  list = [{ title: "a", content: "aa", writer: "aaa" }];
 
-  @action
+  constructor() {
+    // makeObservable(this, {
+    //   list: observable,
+    //   handleList: action,
+    // });
+    makeAutoObservable(this);
+  }
+
   handleList = value => {
     console.log(value);
     this.list = value;

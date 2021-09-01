@@ -40,7 +40,6 @@ const Main = () => {
         onClick={() => {
           console.log(list);
           handleList([...list, { title, content, writer }]);
-          setClick(!click);
         }}
       >
         제출

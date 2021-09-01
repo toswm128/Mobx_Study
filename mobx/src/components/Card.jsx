@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card.css";
+import { observer } from "mobx-react";
 
 const Card = ({ list }) => {
   return (
@@ -17,4 +18,4 @@ const Card = ({ list }) => {
   );
 };
 
-export default Card;
+export default observer(Card);
